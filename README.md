@@ -41,6 +41,7 @@ modules/BFD_Incontracts/vardefs.php
 This module should have 2 special fields. One - it’s a type “link many-to-many” and another field type is “collection”. Note, field of type “collection” should name as the field type “link” with the prefix “collection_”. 
 
 “…
+
         'bfd_c_budget_items' => array (
             'name' => 'bfd_c_budget_items',
             'type' => 'link',
@@ -55,6 +56,7 @@ This module should have 2 special fields. One - it’s a type “link many-to-ma
             'type' => 'collection',
             'source'=>'non-db',
         ),
+        
 …”
 
 modules/BFD_Incontracts/metadata/editviewdefs.php
@@ -65,6 +67,7 @@ modules/BFD_Incontracts/metadata/detailviewdefs.php
 You can use to all standard parameters ('displayParams' and 'customCode') in files editviewdefs.php and quickcreatedefs.php for secondary module, which named “BFD_C_budget_items”. The fields in array 'collection_field_list' should be announced in the secondary module.
 
  “…
+ 
 'panels' => array (
     'lbl_panel_advanced1' => array (
                 9 => array (
@@ -115,6 +118,7 @@ You can use to all standard parameters ('displayParams' and 'customCode') in fil
                 ),
     ),
 ),
+
 …”
 
 Secondary module: “BFD_C_budget_items” 
@@ -122,6 +126,7 @@ Parts of files of this module:
 modules/BFD_C_budget_items/vardefs.php
 
 “…
+
         'number_full' => array (
             'required' => false,
             'name' => 'number_full',
@@ -207,6 +212,7 @@ modules/BFD_C_budget_items/vardefs.php
             'source'=>'non-db',
             'vname'=>'LBL_BFD_INCONTRACTS_COLLECTION',
         ),
+        
 …”
 
 Look at “screen 1.png”
@@ -214,6 +220,8 @@ Look at “screen 1.png”
 
 And don’t forget about file with link many-to-many.
 custom/metadata/bfd_incontracts_bfd_c_budget_items_collectionMetaData.php
+
+“…
 
 $dictionary["bfd_incontracts_bfd_c_budget_items_collection"] = array (
     'bfd_incontracts_bfd_c_budget_items_collection' => 'many-to-many',
@@ -278,6 +286,8 @@ $dictionary["bfd_incontracts_bfd_c_budget_items_collection"] = array (
         ),
     ),
 );
+…”
+
 
 7.
 include/SugarFields/Fields/Collection_files/Collection_files DetailViewRow.tpl
@@ -294,6 +304,7 @@ It’s addition field type for multi load files. It works as a field type collec
 modules/<secondary_object>/vardefs.php
 
 “…
+
         'filename' => array (
             'required' => false,
             'name' => 'filename',
@@ -338,6 +349,7 @@ modules/<secondary_object>/vardefs.php
             'type' => 'Link_file',
             'source'=>'non-db',
         ),
+        
 …”
 
 Look at “screen 2.png”
