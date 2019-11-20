@@ -68,9 +68,9 @@ You can use to all standard parameters ('displayParams' and 'customCode') in fil
 
  “…
  
-'panels' => array (
-    'lbl_panel_advanced1' => array (
-                9 => array (
+    'panels' => array (
+        'lbl_panel_advanced1' => array (
+               9 => array (
                     0 => array (
                         'name' => 'bfd_c_budget_items',
                         'type' => 'collection',
@@ -116,8 +116,8 @@ You can use to all standard parameters ('displayParams' and 'customCode') in fil
                         ),
                     ),
                 ),
+        ),
     ),
-),
 
 …”
 
