@@ -31,7 +31,7 @@ include/SugarFields/Fields/Collection/SugarFieldCollection.php
 include/SugarFields/Fields/Collection/ViewSugarFieldCollection.php
 jssource/src_files/include/SugarFields/Fields/Collection/SugarFieldCollection.js
 
-       It’s repaired field type. This field type was still in the previous versions, include SugarCRM ver.6…, but it was broken. This field type can be used to include in one object a lot of records from another object. It’s to use only standard algorithm which SuiteCRM has. 
+It’s repaired field type. This field type was still in the previous versions, include SugarCRM ver.6…, but it was broken. This field type can be used to include in one object a lot of records from another object. It’s to use only standard algorithm which SuiteCRM has. 
 Example to use:
 
 Main module: “BFD_Incontracts” 
@@ -223,69 +223,69 @@ custom/metadata/bfd_incontracts_bfd_c_budget_items_collectionMetaData.php
 
 “…
 
-$dictionary["bfd_incontracts_bfd_c_budget_items_collection"] = array (
-    'bfd_incontracts_bfd_c_budget_items_collection' => 'many-to-many',
-    'relationships' => array (
-        'bfd_incontracts_bfd_c_budget_items_collection' => array (
-            'rhs_module' => 'BFD_C_budget_items',
-            'rhs_table' => 'bfd_c_budget_items',
-            'lhs_key' => 'id',
-            'lhs_module' => 'BFD_Incontracts',
-            'lhs_table' => 'bfd_incontracts',
-            'rhs_key' => 'id',
-            'relationship_type' => 'many-to-many',
-            'join_table' => 'bfd_incontracts_bfd_c_budget_items_collection',
-            'join_key_lhs' => 'bfd_incontracts_bfd_c_budget_items_collection_ida',
-            'join_key_rhs' => 'bfd_incontracts_bfd_c_budget_items_collection_idb',
-        ),
-    ),
-    'table' => 'bfd_incontracts_bfd_c_budget_items_collection',
-    'fields' => array (
-        0 => array (
-            'name' => 'id',
-            'type' => 'varchar',
-            'len' => 36,
-        ),
-        1 => array (
-            'name' => 'date_modified',
-            'type' => 'datetime',
-        ),
-        2 => array (
-            'name' => 'deleted',
-            'type' => 'bool',
-            'len' => '1',
-            'default' => '0',
-            'required' => true,
-        ),
-        3 => array (
-            'name' => 'bfd_incontracts_bfd_c_budget_items_collection_ida',
-            'type' => 'varchar',
-            'len' => 36,
-        ),
-        4 => array (
-            'name' => 'bfd_incontracts_bfd_c_budget_items_collection_idb',
-            'type' => 'varchar',
-            'len' => 36,
-        ),
-    ),
-    'indices' => array (
-        0 => array (
-            'name' => 'bfd_incontracts_bfd_c_budget_items_collectionspk',
-            'type' => 'primary',
-            'fields' => array (
-                0 => 'id',
+    $dictionary["bfd_incontracts_bfd_c_budget_items_collection"] = array (
+        'bfd_incontracts_bfd_c_budget_items_collection' => 'many-to-many',
+        'relationships' => array (
+            'bfd_incontracts_bfd_c_budget_items_collection' => array (
+                'rhs_module' => 'BFD_C_budget_items',
+                'rhs_table' => 'bfd_c_budget_items',
+                'lhs_key' => 'id',
+                'lhs_module' => 'BFD_Incontracts',
+                'lhs_table' => 'bfd_incontracts',
+                'rhs_key' => 'id',
+                'relationship_type' => 'many-to-many',
+                'join_table' => 'bfd_incontracts_bfd_c_budget_items_collection',
+                'join_key_lhs' => 'bfd_incontracts_bfd_c_budget_items_collection_ida',
+                'join_key_rhs' => 'bfd_incontracts_bfd_c_budget_items_collection_idb',
             ),
         ),
-        1 => array (
-            'name' => 'bfd_incontracts_bfd_c_budget_items_collection_alt',
-            'type' => 'alternate_key',
-            'fields' => array (
-                0 => 'bfd_incontracts_bfd_c_budget_items_collection_ida',
-                1 => 'bfd_incontracts_bfd_c_budget_items_collection_idb',
+       'table' => 'bfd_incontracts_bfd_c_budget_items_collection',
+        'fields' => array (
+            0 => array (
+                'name' => 'id',
+                'type' => 'varchar',
+                'len' => 36,
+            ),
+            1 => array (
+                'name' => 'date_modified',
+                'type' => 'datetime',
+           ),
+            2 => array (
+                'name' => 'deleted',
+                'type' => 'bool',
+                'len' => '1',
+                'default' => '0',
+                'required' => true,
+            ),
+            3 => array (
+                'name' => 'bfd_incontracts_bfd_c_budget_items_collection_ida',
+                'type' => 'varchar',
+                'len' => 36,
+            ),
+            4 => array (
+                'name' => 'bfd_incontracts_bfd_c_budget_items_collection_idb',
+                'type' => 'varchar',
+                'len' => 36,
             ),
         ),
-    ),
-);
+        'indices' => array (
+            0 => array (
+                'name' => 'bfd_incontracts_bfd_c_budget_items_collectionspk',
+                'type' => 'primary',
+                'fields' => array (
+                    0 => 'id',
+                ),
+            ),
+            1 => array (
+                'name' => 'bfd_incontracts_bfd_c_budget_items_collection_alt',
+                'type' => 'alternate_key',
+                'fields' => array (
+                    0 => 'bfd_incontracts_bfd_c_budget_items_collection_ida',
+                    1 => 'bfd_incontracts_bfd_c_budget_items_collection_idb',
+                ),
+            ),
+        ),
+    );
 
 …”
 
