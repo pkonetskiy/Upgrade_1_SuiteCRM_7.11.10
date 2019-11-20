@@ -1,6 +1,7 @@
 It’s upgrades for SuiteCRM 7.11.10. There are some changes. The most interesting are:
 -	Repair “collection” field type;
 -	Make “collection_file” field type;
+-       Work dropdown menu or buttons in Edit and Detail form;
 -	Show system message;
 -	Change design for search form;
 -	and others.
