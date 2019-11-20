@@ -124,7 +124,7 @@ class SugarFieldCollection_files extends SugarFieldBase {
             $destination = "upload://";
             if(UploadStream::writable()) {
                 for ($i = 0; $i < $countfiles; $i++){
-                    if ($filefilds['error'][$i] == 0 && $filefilds['size'][$i] != 0)
+                    if ($filefilds['error'][$i] == 0 && $filefilds['size'][$i] != 0){
                         if(is_uploaded_file($filefilds['tmp_name'][$i])) {
                             $bean_collection = new $bean_name();
                             $bean_collection->filename = $filefilds['name'][$i];
@@ -139,6 +139,7 @@ class SugarFieldCollection_files extends SugarFieldBase {
                             }
 //                            $GLOBALS['log']->fatal("SugarFieldCollection_files save filefilds[error][$i]:\n ".print_r($filefilds['name'][$i],true));   
                         }
+                    }
                 }
             }
 
@@ -169,7 +170,7 @@ class SugarFieldCollection_files extends SugarFieldBase {
             
             $delete_id_list = Array();
             $delete_id_list = explode(';', $params['collection_'.$link_field.'_remove']);
-            if (!empty($delete_id_list))
+            if (!empty($delete_id_list)){
                 foreach ($delete_id_list as $delete_id) {
                     $bean_collection = new $bean_name();
                     $bean_collection->retrieve($delete_id);
@@ -178,6 +179,7 @@ class SugarFieldCollection_files extends SugarFieldBase {
                         unlink($destination.$delete_id.'_filename');
 //                    $bean->$link_field->delete($delete_id);
                 }
+            }
         }
 /* */
     }
