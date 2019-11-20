@@ -39,6 +39,7 @@ Parts of files of this module:
 
 modules/BFD_Incontracts/vardefs.php
 This module should have 2 special fields. One - it’s a type “link many-to-many” and another field type is “collection”. Note, field of type “collection” should name as the field type “link” with the prefix “collection_”. 
+
 “…
         'bfd_c_budget_items' => array (
             'name' => 'bfd_c_budget_items',
@@ -55,12 +56,14 @@ This module should have 2 special fields. One - it’s a type “link many-to-ma
             'source'=>'non-db',
         ),
 …”
+
 modules/BFD_Incontracts/metadata/editviewdefs.php
 and
 modules/BFD_Incontracts/metadata/quickcreatedefs.php
 and
 modules/BFD_Incontracts/metadata/detailviewdefs.php
 You can use to all standard parameters ('displayParams' and 'customCode') in files editviewdefs.php and quickcreatedefs.php for secondary module, which named “BFD_C_budget_items”. The fields in array 'collection_field_list' should be announced in the secondary module.
+
  “…
 'panels' => array (
     'lbl_panel_advanced1' => array (
@@ -117,6 +120,7 @@ You can use to all standard parameters ('displayParams' and 'customCode') in fil
 Secondary module: “BFD_C_budget_items” 
 Parts of files of this module:
 modules/BFD_C_budget_items/vardefs.php
+
 “…
         'number_full' => array (
             'required' => false,
@@ -204,11 +208,13 @@ modules/BFD_C_budget_items/vardefs.php
             'vname'=>'LBL_BFD_INCONTRACTS_COLLECTION',
         ),
 …”
+
 Look at “screen 1.png”
 
 
 And don’t forget about file with link many-to-many.
 custom/metadata/bfd_incontracts_bfd_c_budget_items_collectionMetaData.php
+
 $dictionary["bfd_incontracts_bfd_c_budget_items_collection"] = array (
     'bfd_incontracts_bfd_c_budget_items_collection' => 'many-to-many',
     'relationships' => array (
@@ -286,6 +292,7 @@ jssource/src_files/include/SugarFields/Fields/Collection_files/SugarFieldCollect
 
 It’s addition field type for multi load files. It works as a field type collection, but with one difference in a secondary object. You should make 3 required fields in addition to link. Note, there is a new field type – 'link_file' (see information below).
 modules/<secondary_object>/vardefs.php
+
 “…
         'filename' => array (
             'required' => false,
@@ -332,6 +339,7 @@ modules/<secondary_object>/vardefs.php
             'source'=>'non-db',
         ),
 …”
+
 Look at “screen 2.png”
 
 
