@@ -433,6 +433,7 @@ Look at “screen 3.png”
 
 
 You can install this upgrade to use “Admin->Upgrade Wizard”. I recommend to make: 
-“Admin->Repair->Rebuild JS Compressed Files” , “Admin->Repair->Rebuild JS Grouping Files” , “Admin->Repair->Rebuild Minified JS Files” after the upgrade 
+“Admin->Repair->Rebuild JS Compressed Files” , “Admin->Repair->Rebuild JS Grouping Files” , “Admin->Repair->Rebuild Minified JS Files” after the upgrade.
+
 If you want to use this change in another version (from SugarCRM 6.x.x CE) you can make it manually. You should find comment in every file (start comment – ‘/* BizForce */’, end comment ‘/* */). Files themes/SuiteP/include/EditView/EditView.tpl and themes/SuiteP/include/DetailView/DetailView.tpl don’t have all comments because there are a lot of changes.
 
