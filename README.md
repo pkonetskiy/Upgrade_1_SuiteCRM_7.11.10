@@ -6,8 +6,8 @@ It’s upgrades for SuiteCRM 7.11.10. There are some changes. The most interesti
 -	Change design for search form;
 -	and others.
 
-1. include/Dashlets/DashletGeneric.php
-
+1. 
+include/Dashlets/DashletGeneric.php
 It's to use "displayParams" in fields of Relate and Parent.
 
 2. 
