@@ -9,19 +9,24 @@ It’s upgrades for SuiteCRM 7.11.10. There are some changes. The most interesti
 1. 
 include/Dashlets/DashletGeneric.php
         It's to use "displayParams" in fields of Relate and Parent.
+
 2. 
 include/Dashlets/SubpanelQuickCreate.php
         It’s to use only button in form QuickCreate and ignore dropdown menu. 
+
 3. 
 include/MVC/Controller/action_file_map.php
         It’s to add new field type which is made in field type “collection”.
+
 4. 
 include/SugarFields/Fields/Relate/EditView.tpl
         a) It’s to add to form “metadata” to use in script.
         b) It’s to clean all fill in fields with “field_to_name_array”.
+
 5.
 include/SugarFields/Fields/File/EditView.tpl
         It's addition check before delete file.
+
 6.
 include/SugarFields/Fields/Collection/CollectionDetailViewRow.tpl
 include/SugarFields/Fields/Collection/CollectionEditViewRow.tpl
