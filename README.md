@@ -16,7 +16,6 @@ include/Dashlets/SubpanelQuickCreate.php
 include/MVC/Controller/action_file_map.php
         It’s to add new field type which is made in field type “collection”.
 4. 
-include/SugarFields/Fields/Parent/EditView.tpl
 include/SugarFields/Fields/Relate/EditView.tpl
         a) It’s to add to form “metadata” to use in script.
         b) It’s to clean all fill in fields with “field_to_name_array”.
