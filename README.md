@@ -46,56 +46,56 @@ modules/BFD_Incontracts/metadata/editviewdefs.php and modules/BFD_Incontracts/me
 
 “…
 
-'panels' => array (
-    'lbl_panel_advanced1' => array (
-           9 => array (
-                0 => array (
-                    'name' => 'bfd_c_budget_items',
-                    'type' => 'collection',
-                    'displayParams' => array (
-                        'collection_field_list' => array(
-                            array(
-                                'name' => 'bfd_budget_items_name',
-                                'displayParams' => array (
-                                    'size'=>'40%',
-                                    'field_to_name_array'=> array(
-                                        'name' => 'bfd_budget_items_name',
-                                        'id' => 'bfd_budget_items_id',
-                                        'responsibility_center' => 'responsibility_center',
-                                        'employees_name' => 'employees_name',
+    'panels' => array (
+        'lbl_panel_advanced1' => array (
+               9 => array (
+                    0 => array (
+                        'name' => 'bfd_c_budget_items',
+                        'type' => 'collection',
+                        'displayParams' => array (
+                            'collection_field_list' => array(
+                                array(
+                                    'name' => 'bfd_budget_items_name',
+                                    'displayParams' => array (
+                                        'size'=>'40%',
+                                        'field_to_name_array'=> array(
+                                            'name' => 'bfd_budget_items_name',
+                                            'id' => 'bfd_budget_items_id',
+                                            'responsibility_center' => 'responsibility_center',
+                                            'employees_name' => 'employees_name',
+                                        ),
                                     ),
                                 ),
-                            ),
-                            array(
-                                'name' => 'amount',
-                                'displayParams' => array (
-                                    'size'=>'20%',
+                                array(
+                                    'name' => 'amount',
+                                    'displayParams' => array (
+                                        'size'=>'20%',
+                                    ),
                                 ),
-                            ),
-                            array(
-                                'name' => 'responsibility_center',
-                                'displayParams' => array (
-                                    'size'=>'20%',
+                                array(
+                                    'name' => 'responsibility_center',
+                                    'displayParams' => array (
+                                        'size'=>'20%',
+                                    ),
                                 ),
-                            ),
-                            array(
-                                'name' => 'employees_name',
-                                'displayParams' => array (
-                                    'size'=>'20%',
+                                array(
+                                    'name' => 'employees_name',
+                                    'displayParams' => array (
+                                        'size'=>'20%',
+                                    ),
                                 ),
-                            ),
-                            array(
-                                'name' => 'number_full',
-                                'displayParams' => array (
-                                    'hidden'=> true,
+                                array(
+                                    'name' => 'number_full',
+                                    'displayParams' => array (
+                                        'hidden'=> true,
+                                    ),
                                 ),
                             ),
                         ),
                     ),
                 ),
-            ),
+        ),
     ),
-),
 …”
 
 Secondary module: “BFD_C_budget_items” Parts of files of this module: modules/BFD_C_budget_items/vardefs.php
@@ -195,69 +195,69 @@ And don’t forget about file with link many-to-many. custom/metadata/bfd_incont
 
 “…
 
-$dictionary["bfd_incontracts_bfd_c_budget_items_collection"] = array (
-    'bfd_incontracts_bfd_c_budget_items_collection' => 'many-to-many',
-    'relationships' => array (
-        'bfd_incontracts_bfd_c_budget_items_collection' => array (
-            'rhs_module' => 'BFD_C_budget_items',
-            'rhs_table' => 'bfd_c_budget_items',
-            'lhs_key' => 'id',
-            'lhs_module' => 'BFD_Incontracts',
-            'lhs_table' => 'bfd_incontracts',
-            'rhs_key' => 'id',
-            'relationship_type' => 'many-to-many',
-            'join_table' => 'bfd_incontracts_bfd_c_budget_items_collection',
-            'join_key_lhs' => 'bfd_incontracts_bfd_c_budget_items_collection_ida',
-            'join_key_rhs' => 'bfd_incontracts_bfd_c_budget_items_collection_idb',
-        ),
-    ),
-   'table' => 'bfd_incontracts_bfd_c_budget_items_collection',
-    'fields' => array (
-        0 => array (
-            'name' => 'id',
-            'type' => 'varchar',
-            'len' => 36,
-        ),
-        1 => array (
-            'name' => 'date_modified',
-            'type' => 'datetime',
-       ),
-        2 => array (
-            'name' => 'deleted',
-            'type' => 'bool',
-            'len' => '1',
-            'default' => '0',
-            'required' => true,
-        ),
-        3 => array (
-            'name' => 'bfd_incontracts_bfd_c_budget_items_collection_ida',
-            'type' => 'varchar',
-            'len' => 36,
-        ),
-        4 => array (
-            'name' => 'bfd_incontracts_bfd_c_budget_items_collection_idb',
-            'type' => 'varchar',
-            'len' => 36,
-        ),
-    ),
-    'indices' => array (
-        0 => array (
-            'name' => 'bfd_incontracts_bfd_c_budget_items_collectionspk',
-            'type' => 'primary',
-            'fields' => array (
-                0 => 'id',
+    $dictionary["bfd_incontracts_bfd_c_budget_items_collection"] = array (
+        'bfd_incontracts_bfd_c_budget_items_collection' => 'many-to-many',
+        'relationships' => array (
+            'bfd_incontracts_bfd_c_budget_items_collection' => array (
+                'rhs_module' => 'BFD_C_budget_items',
+                'rhs_table' => 'bfd_c_budget_items',
+                'lhs_key' => 'id',
+                'lhs_module' => 'BFD_Incontracts',
+                'lhs_table' => 'bfd_incontracts',
+                'rhs_key' => 'id',
+                'relationship_type' => 'many-to-many',
+                'join_table' => 'bfd_incontracts_bfd_c_budget_items_collection',
+                'join_key_lhs' => 'bfd_incontracts_bfd_c_budget_items_collection_ida',
+                'join_key_rhs' => 'bfd_incontracts_bfd_c_budget_items_collection_idb',
             ),
         ),
-        1 => array (
-            'name' => 'bfd_incontracts_bfd_c_budget_items_collection_alt',
-            'type' => 'alternate_key',
-            'fields' => array (
-                0 => 'bfd_incontracts_bfd_c_budget_items_collection_ida',
-                1 => 'bfd_incontracts_bfd_c_budget_items_collection_idb',
+       'table' => 'bfd_incontracts_bfd_c_budget_items_collection',
+        'fields' => array (
+            0 => array (
+                'name' => 'id',
+                'type' => 'varchar',
+                'len' => 36,
+            ),
+            1 => array (
+                'name' => 'date_modified',
+                'type' => 'datetime',
+           ),
+            2 => array (
+                'name' => 'deleted',
+                'type' => 'bool',
+                'len' => '1',
+                'default' => '0',
+                'required' => true,
+            ),
+            3 => array (
+                'name' => 'bfd_incontracts_bfd_c_budget_items_collection_ida',
+                'type' => 'varchar',
+                'len' => 36,
+            ),
+            4 => array (
+                'name' => 'bfd_incontracts_bfd_c_budget_items_collection_idb',
+                'type' => 'varchar',
+                'len' => 36,
             ),
         ),
-    ),
-);
+        'indices' => array (
+            0 => array (
+                'name' => 'bfd_incontracts_bfd_c_budget_items_collectionspk',
+                'type' => 'primary',
+                'fields' => array (
+                    0 => 'id',
+                ),
+            ),
+            1 => array (
+                'name' => 'bfd_incontracts_bfd_c_budget_items_collection_alt',
+                'type' => 'alternate_key',
+                'fields' => array (
+                    0 => 'bfd_incontracts_bfd_c_budget_items_collection_ida',
+                    1 => 'bfd_incontracts_bfd_c_budget_items_collection_idb',
+                ),
+            ),
+        ),
+    );
 …”
 
 include/SugarFields/Fields/Collection_files/Collection_files DetailViewRow.tpl include/SugarFields/Fields/Collection_files/Collection_files EditViewRow.tpl include/SugarFields/Fields/Collection_files/DetailView.tpl include/SugarFields/Fields/Collection_files/EditView.tpl include/SugarFields/Fields/Collection_files/SugarFieldCollection_files.php include/SugarFields/Fields/Collection_files/ViewSugarFieldCollection_files.php include/SugarFields/Fields/Collection_files/view.sugarfieldcollection_files.php jssource/src_files/include/SugarFields/Fields/Collection_files/SugarFieldCollection_files.js
